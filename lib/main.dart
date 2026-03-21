@@ -113,9 +113,23 @@ class BriMoFinalReplication extends StatelessWidget {
                 gradient: LinearGradient(colors: [Color(0xFF00529C), Color(0xFF0074D9)]),
                 borderRadius: BorderRadius.circular(12),
               ),
-              
-            )
-          )
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Lengkapi Liburan Lebaranmu", style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: Colors.white)),
+                        Text("Solusi Pinjaman Praktis s.d. Rp.50 juta!", style: TextStyle(fontSize: 10, color: Colors.white70))
+                      ],
+                    ),
+                  ),
+                  Icon(Icons.arrow_forward_ios, size: 14, color: Colors.white),
+                ],
+              ),
+            ),
+          ),
+          // 4.KOTAK PUTIH 3 (PENCARIAN)
         )
       )
     )
