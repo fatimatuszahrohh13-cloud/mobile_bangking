@@ -39,6 +39,7 @@ class BriMoFinalReplication extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
+          children: [
           Stack(
             clipBehavior: Clip.none,
             children: [
@@ -165,7 +166,28 @@ class BriMoFinalReplication extends StatelessWidget {
               ),
             ),
           ),
-                          
+          // 5. GRID MENU BAWAH (8 ITEM LENGKAP)
+          Padding(
+            padding: EdgeInsets.all(10),
+            child: GridView.count(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              crossAxisCount: 4,
+              mainAxisSpacing: 15,
+              children: [
+                _buildGridItem(Icons.wallet, "Top Up", Colors.green),
+                _buildGridItem(Icons.credit_card, "BRIZZI", Colors.blue),
+                _buildGridItem(Icons.receipt_long, "Tagihan", Colors.orange),
+                _buildGridItem(Icons.swap_horiz, "Transfer", Colors.blue),
+                _buildGridItem(Icons.shopping_bag, "Lifestyle", Colors.pink),
+                _buildGridItem(Icons.atm, "Setor & Tarik", Colors.blue),
+                _buildGridItem(Icons.bar_cart, "Investasi", Colors.orange),
+                _buildGridItem(Icons.more_horiz, "Lainnya", Colors.grey),
+              ],
+            ),
+          ),  
+          SizedBox(height: 20),
+          ]          
         )
       )
     )
